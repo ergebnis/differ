@@ -13,23 +13,23 @@ declare(strict_types=1);
 
 namespace Ergebnis\Differ\Test\Unit;
 
-use Ergebnis\Differ\Example;
 use Ergebnis\Differ\Test;
+use Ergebnis\Differ\Text;
 use PHPUnit\Framework;
 
 /**
- * @covers \Ergebnis\Differ\Example
+ * @covers \Ergebnis\Differ\Text
  */
-final class ExampleTest extends Framework\TestCase
+final class TextTest extends Framework\TestCase
 {
     use Test\Util\Helper;
 
-    public function testFromStringReturnsExample(): void
+    public function testFromStringReturnsText(): void
     {
-        $value = self::faker()->sentence();
+        $value = self::faker()->text();
 
-        $example = Example::fromString($value);
+        $text = Text::fromString($value);
 
-        self::assertSame($value, $example->toString());
+        self::assertSame($value, $text->toString());
     }
 }
