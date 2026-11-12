@@ -3,6 +3,11 @@
   "description": "Provides a composer package with a differ for creating a unified diff of two strings.",
   "license": "MIT",
   "type": "library",
+  "keywords": [
+    "diff",
+    "differ",
+    "unified-diff"
+  ],
   "authors": [
     {
       "name": "Andreas Möller",
