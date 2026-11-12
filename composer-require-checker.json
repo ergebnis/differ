@@ -1,6 +1,12 @@
 {
   "symbol-whitelist": [
+    "array",
+    "bool",
+    "false",
+    "int",
+    "null",
     "self",
-    "string"
+    "string",
+    "true"
   ]
 }

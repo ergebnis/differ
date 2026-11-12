@@ -13,7 +13,7 @@ declare(strict_types=1);
 
 namespace Ergebnis\Differ;
 
-final class Example
+final class Diff
 {
     private string $value;
 
@@ -25,6 +25,11 @@ final class Example
     public static function fromString(string $value): self
     {
         return new self($value);
+    }
+
+    public function isEmpty(): bool
+    {
+        return '' === $this->value;
     }
 
     public function toString(): string
