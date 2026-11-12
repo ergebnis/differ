@@ -1,0 +1,69 @@
+# differ
+
+[![Integrate](https://github.com/ergebnis/differ/actions/workflows/integrate.yaml/badge.svg?branch=main)](https://github.com/ergebnis/differ/actions/workflows/integrate.yaml)
+[![Merge](https://github.com/ergebnis/differ/actions/workflows/merge.yaml/badge.svg)](https://github.com/ergebnis/differ/actions/workflows/merge.yaml)
+[![Release](https://github.com/ergebnis/differ/actions/workflows/release.yaml/badge.svg)](https://github.com/ergebnis/differ/actions/workflows/release.yaml)
+[![Renew](https://github.com/ergebnis/differ/actions/workflows/renew.yaml/badge.svg)](https://github.com/ergebnis/differ/actions/workflows/renew.yaml)
+
+[![Code Coverage](https://codecov.io/gh/ergebnis/differ/branch/main/graph/badge.svg)](https://codecov.io/gh/ergebnis/differ)
+
+[![Latest Stable Version](https://poser.pugx.org/ergebnis/differ/v/stable)](https://packagist.org/packages/ergebnis/differ)
+[![Total Downloads](https://poser.pugx.org/ergebnis/differ/downloads)](https://packagist.org/packages/ergebnis/differ)
+[![Monthly Downloads](https://poser.pugx.org/ergebnis/differ/d/monthly)](https://packagist.org/packages/ergebnis/differ)
+
+This project provides a [`composer`](https://getcomposer.org) package with a differ for creating a unified diff of two strings.
+
+## Installation
+
+Run
+
+```sh
+composer require ergebnis/differ
+```
+
+## Usage
+
+💡 This is a great place for showing a few usage examples!
+
+## Changelog
+
+The maintainers of this project record notable changes to this project in a [changelog](CHANGELOG.md).
+
+## Contributing
+
+The maintainers of this project suggest following the [contribution guide](.github/CONTRIBUTING.md).
+
+## Code of Conduct
+
+The maintainers of this project ask contributors to follow the [code of conduct](.github/CODE_OF_CONDUCT.md).
+
+## General Support Policy
+
+The maintainers of this project provide limited support.
+
+## PHP Version Support Policy
+
+This project currently supports the following PHP versions:
+
+- [PHP 7.4](https://www.php.net/releases/#7.4.0) (has reached its end of life on November 28, 2022)
+- [PHP 8.0](https://www.php.net/releases/#8.0.0) (has reached its end of life on November 26, 2023)
+- [PHP 8.1](https://www.php.net/releases/#8.1.0) (has reached its end of life on December 31, 2025)
+- [PHP 8.2](https://www.php.net/releases/#8.2.0)
+- [PHP 8.3](https://www.php.net/releases/#8.3.0)
+- [PHP 8.4](https://www.php.net/releases/#8.4.0)
+- [PHP 8.5](https://www.php.net/releases/#8.5.0)
+- [PHP 8.6](https://www.php.net/releases/#8.6.0)
+
+The maintainers of this project add support for a PHP version following its initial release and _may_ drop support for a PHP version when it has reached its [end of life](https://www.php.net/supported-versions.php).
+
+## Security Policy
+
+This project has a [security policy](.github/SECURITY.md).
+
+## License
+
+This project uses the [MIT license](LICENSE.md).
+
+## Social
+
+Follow [@localheinz](https://x.com/intent/follow?screen_name=localheinz) and [@ergebnis](https://x.com/intent/follow?screen_name=ergebnis) on X.
