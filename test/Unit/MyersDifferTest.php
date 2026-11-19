@@ -104,260 +104,260 @@ final class MyersDifferTest extends Framework\TestCase
     {
         yield 'line changed' => [
             <<<'TXT'
-a
-b
-c
-d
-e
-f
-g
+                a
+                b
+                c
+                d
+                e
+                f
+                g
 
-TXT,
+                TXT,
             <<<'TXT'
-a
-b
-c
-x
-e
-f
-g
+                a
+                b
+                c
+                x
+                e
+                f
+                g
 
-TXT,
+                TXT,
             <<<'TXT'
-@@ -1,7 +1,7 @@
- a
- b
- c
--d
-+x
- e
- f
- g
+                @@ -1,7 +1,7 @@
+                 a
+                 b
+                 c
+                -d
+                +x
+                 e
+                 f
+                 g
 
-TXT,
+                TXT,
         ];
 
         yield 'line added at end' => [
             <<<'TXT'
-a
-b
-c
-d
-e
+                a
+                b
+                c
+                d
+                e
 
-TXT,
+                TXT,
             <<<'TXT'
-a
-b
-c
-d
-e
-f
+                a
+                b
+                c
+                d
+                e
+                f
 
-TXT,
+                TXT,
             <<<'TXT'
-@@ -3,3 +3,4 @@
- c
- d
- e
-+f
+                @@ -3,3 +3,4 @@
+                 c
+                 d
+                 e
+                +f
 
-TXT,
+                TXT,
         ];
 
         yield 'line removed at start' => [
             <<<'TXT'
-a
-b
-c
-d
-e
+                a
+                b
+                c
+                d
+                e
 
-TXT,
+                TXT,
             <<<'TXT'
-b
-c
-d
-e
+                b
+                c
+                d
+                e
 
-TXT,
+                TXT,
             <<<'TXT'
-@@ -1,4 +1,3 @@
--a
- b
- c
- d
+                @@ -1,4 +1,3 @@
+                -a
+                 b
+                 c
+                 d
 
-TXT,
+                TXT,
         ];
 
         yield 'lines moved' => [
             <<<'TXT'
-a
-b
-c
+                a
+                b
+                c
 
-TXT,
+                TXT,
             <<<'TXT'
-c
-a
-b
+                c
+                a
+                b
 
-TXT,
+                TXT,
             <<<'TXT'
-@@ -1,3 +1,3 @@
-+c
- a
- b
--c
+                @@ -1,3 +1,3 @@
+                +c
+                 a
+                 b
+                -c
 
-TXT,
+                TXT,
         ];
 
         yield 'changes separated by fewer than six unchanged lines' => [
             <<<'TXT'
-a
-b
-c
-d
-e
-f
-g
+                a
+                b
+                c
+                d
+                e
+                f
+                g
 
-TXT,
+                TXT,
             <<<'TXT'
-x
-b
-c
-d
-e
-f
-y
+                x
+                b
+                c
+                d
+                e
+                f
+                y
 
-TXT,
+                TXT,
             <<<'TXT'
-@@ -1,7 +1,7 @@
--a
-+x
- b
- c
- d
- e
- f
--g
-+y
+                @@ -1,7 +1,7 @@
+                -a
+                +x
+                 b
+                 c
+                 d
+                 e
+                 f
+                -g
+                +y
 
-TXT,
+                TXT,
         ];
 
         yield 'changes separated by six unchanged lines' => [
             <<<'TXT'
-a
-b
-c
-d
-e
-f
-g
-h
+                a
+                b
+                c
+                d
+                e
+                f
+                g
+                h
 
-TXT,
+                TXT,
             <<<'TXT'
-x
-b
-c
-d
-e
-f
-g
-y
+                x
+                b
+                c
+                d
+                e
+                f
+                g
+                y
 
-TXT,
+                TXT,
             <<<'TXT'
-@@ -1,4 +1,4 @@
--a
-+x
- b
- c
- d
-@@ -5,4 +5,4 @@
- e
- f
- g
--h
-+y
+                @@ -1,4 +1,4 @@
+                -a
+                +x
+                 b
+                 c
+                 d
+                @@ -5,4 +5,4 @@
+                 e
+                 f
+                 g
+                -h
+                +y
 
-TXT,
+                TXT,
         ];
 
         yield 'from is empty' => [
             '',
             <<<'TXT'
-a
-b
+                a
+                b
 
-TXT,
+                TXT,
             <<<'TXT'
-@@ -1,0 +1,2 @@
-+a
-+b
+                @@ -1,0 +1,2 @@
+                +a
+                +b
 
-TXT,
+                TXT,
         ];
 
         yield 'to is empty' => [
             <<<'TXT'
-a
-b
+                a
+                b
 
-TXT,
+                TXT,
             '',
             <<<'TXT'
-@@ -1,2 +1,0 @@
--a
--b
+                @@ -1,2 +1,0 @@
+                -a
+                -b
 
-TXT,
+                TXT,
         ];
 
         yield 'final new line added' => [
             <<<'TXT'
-a
-b
-TXT,
+                a
+                b
+                TXT,
             <<<'TXT'
-a
-b
+                a
+                b
 
-TXT,
+                TXT,
             <<<'TXT'
-@@ -1,2 +1,2 @@
- a
--b
-\ No newline at end of file
-+b
+                @@ -1,2 +1,2 @@
+                 a
+                -b
+                \ No newline at end of file
+                +b
 
-TXT,
+                TXT,
         ];
 
         yield 'final new line removed' => [
             <<<'TXT'
-a
-b
+                a
+                b
 
-TXT,
+                TXT,
             <<<'TXT'
-a
-b
-TXT,
+                a
+                b
+                TXT,
             <<<'TXT'
-@@ -1,2 +1,2 @@
- a
--b
-+b
-\ No newline at end of file
+                @@ -1,2 +1,2 @@
+                 a
+                -b
+                +b
+                \ No newline at end of file
 
-TXT,
+                TXT,
         ];
 
         yield 'carriage return and line feed' => [
