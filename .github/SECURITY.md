@@ -4,13 +4,13 @@
 
 The following versions of `ergebnis/differ` have active support:
 
-- `^1.0.0`
+- `^1.1.0`
 
 ## Unsupported Versions
 
 The following versions of `ergebnis/differ` have reached their end of life:
 
-- `<1.0.0`
+- `<1.1.0`
 
 ## Reporting a Vulnerability
 
