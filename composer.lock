@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "dcb4740f6b11a423aa609d262549cc3e",
+    "content-hash": "6cbf6522af51de8b73240ba1bd7e2aa5",
     "packages": [],
     "packages-dev": [
         {
@@ -2932,11 +2932,11 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "2.3.6",
+            "version": "2.3.7",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/00cedebb76cc82c1592414fa4f616cefdccda16f",
-                "reference": "00cedebb76cc82c1592414fa4f616cefdccda16f",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/90c91c2498849ab8cc4e873864bbf1cb2bf6ea12",
+                "reference": "90c91c2498849ab8cc4e873864bbf1cb2bf6ea12",
                 "shasum": ""
             },
             "require": {
@@ -2992,7 +2992,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-11-15T19:58:26+00:00"
+            "time": "2026-11-19T10:31:11+00:00"
         },
         {
             "name": "phpstan/phpstan-deprecation-rules",
@@ -3047,16 +3047,16 @@
         },
         {
             "name": "phpstan/phpstan-phpunit",
-            "version": "2.1.2",
+            "version": "2.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan-phpunit.git",
-                "reference": "ffff35d4f96c4642d7f41a3515d90afa0f58be62"
+                "reference": "3912977f00552c85adcf7ca0960e49bdce95b36f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan-phpunit/zipball/ffff35d4f96c4642d7f41a3515d90afa0f58be62",
-                "reference": "ffff35d4f96c4642d7f41a3515d90afa0f58be62",
+                "url": "https://api.github.com/repos/phpstan/phpstan-phpunit/zipball/3912977f00552c85adcf7ca0960e49bdce95b36f",
+                "reference": "3912977f00552c85adcf7ca0960e49bdce95b36f",
                 "shasum": ""
             },
             "require": {
@@ -3099,9 +3099,9 @@
             ],
             "support": {
                 "issues": "https://github.com/phpstan/phpstan-phpunit/issues",
-                "source": "https://github.com/phpstan/phpstan-phpunit/tree/2.1.2"
+                "source": "https://github.com/phpstan/phpstan-phpunit/tree/2.1.3"
             },
-            "time": "2026-11-12T15:27:53+00:00"
+            "time": "2026-11-24T08:18:33+00:00"
         },
         {
             "name": "phpstan/phpstan-strict-rules",
