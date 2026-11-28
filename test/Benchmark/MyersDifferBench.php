@@ -13,17 +13,13 @@ declare(strict_types=1);
 
 namespace Ergebnis\Differ\Test\Benchmark;
 
-use Ergebnis\Differ\From;
-use Ergebnis\Differ\Label;
-use Ergebnis\Differ\MyersDiffer;
-use Ergebnis\Differ\Text;
-use Ergebnis\Differ\To;
+use Ergebnis\Differ;
 
 final class MyersDifferBench
 {
-    private MyersDiffer $differ;
-    private From $from;
-    private To $to;
+    private Differ\MyersDiffer $differ;
+    private Differ\From $from;
+    private Differ\To $to;
 
     /**
      * @param array{change: string, lines: int} $parameters
@@ -65,14 +61,14 @@ final class MyersDifferBench
             }
         }
 
-        $this->differ = new MyersDiffer();
-        $this->from = From::create(
-            Label::fromString('from'),
-            Text::fromString(\implode('', $fromLines)),
+        $this->differ = new Differ\MyersDiffer();
+        $this->from = Differ\From::create(
+            Differ\Label::fromString('from'),
+            Differ\Text::fromString(\implode('', $fromLines)),
         );
-        $this->to = To::create(
-            Label::fromString('to'),
-            Text::fromString(\implode('', $toLines)),
+        $this->to = Differ\To::create(
+            Differ\Label::fromString('to'),
+            Differ\Text::fromString(\implode('', $toLines)),
         );
     }
 

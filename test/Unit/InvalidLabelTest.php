@@ -13,7 +13,7 @@ declare(strict_types=1);
 
 namespace Ergebnis\Differ\Test\Unit;
 
-use Ergebnis\Differ\InvalidLabel;
+use Ergebnis\Differ;
 use PHPUnit\Framework;
 
 /**
@@ -23,7 +23,7 @@ final class InvalidLabelTest extends Framework\TestCase
 {
     public function testContainsLineBreakReturnsInvalidLabel(): void
     {
-        $exception = InvalidLabel::containsLineBreak();
+        $exception = Differ\InvalidLabel::containsLineBreak();
 
         self::assertSame('Label must not contain a line break.', $exception->getMessage());
     }

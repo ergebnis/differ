@@ -13,8 +13,7 @@ declare(strict_types=1);
 
 namespace Ergebnis\Differ\Test\Unit;
 
-use Ergebnis\Differ\Diff;
-use Ergebnis\Differ\Test;
+use Ergebnis\Differ;
 use PHPUnit\Framework;
 
 /**
@@ -22,11 +21,11 @@ use PHPUnit\Framework;
  */
 final class DiffTest extends Framework\TestCase
 {
-    use Test\Util\Helper;
+    use Differ\Test\Util\Helper;
 
     public function testFromStringReturnsDiffWhenValueIsEmpty(): void
     {
-        $diff = Diff::fromString('');
+        $diff = Differ\Diff::fromString('');
 
         self::assertTrue($diff->isEmpty());
         self::assertSame('', $diff->toString());
@@ -36,7 +35,7 @@ final class DiffTest extends Framework\TestCase
     {
         $value = self::faker()->text();
 
-        $diff = Diff::fromString($value);
+        $diff = Differ\Diff::fromString($value);
 
         self::assertFalse($diff->isEmpty());
         self::assertSame($value, $diff->toString());

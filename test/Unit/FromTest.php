@@ -13,10 +13,7 @@ declare(strict_types=1);
 
 namespace Ergebnis\Differ\Test\Unit;
 
-use Ergebnis\Differ\From;
-use Ergebnis\Differ\Label;
-use Ergebnis\Differ\Test;
-use Ergebnis\Differ\Text;
+use Ergebnis\Differ;
 use PHPUnit\Framework;
 
 /**
@@ -27,16 +24,16 @@ use PHPUnit\Framework;
  */
 final class FromTest extends Framework\TestCase
 {
-    use Test\Util\Helper;
+    use Differ\Test\Util\Helper;
 
     public function testCreateReturnsFrom(): void
     {
         $faker = self::faker();
 
-        $label = Label::fromString($faker->word());
-        $text = Text::fromString($faker->text());
+        $label = Differ\Label::fromString($faker->word());
+        $text = Differ\Text::fromString($faker->text());
 
-        $from = From::create(
+        $from = Differ\From::create(
             $label,
             $text,
         );
