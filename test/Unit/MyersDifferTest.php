@@ -13,13 +13,7 @@ declare(strict_types=1);
 
 namespace Ergebnis\Differ\Test\Unit;
 
-use Ergebnis\Differ\Diff;
-use Ergebnis\Differ\From;
-use Ergebnis\Differ\Label;
-use Ergebnis\Differ\MyersDiffer;
-use Ergebnis\Differ\Test;
-use Ergebnis\Differ\Text;
-use Ergebnis\Differ\To;
+use Ergebnis\Differ;
 use PHPUnit\Framework;
 
 /**
@@ -33,7 +27,7 @@ use PHPUnit\Framework;
  */
 final class MyersDifferTest extends Framework\TestCase
 {
-    use Test\Util\Helper;
+    use Differ\Test\Util\Helper;
 
     public function testDiffReturnsEmptyDiffWhenContentsOfFromAndToAreIdentical(): void
     {
@@ -45,20 +39,20 @@ final class MyersDifferTest extends Framework\TestCase
             $faker->sentence(),
         );
 
-        $differ = new MyersDiffer();
+        $differ = new Differ\MyersDiffer();
 
         $diff = $differ->diff(
-            From::create(
-                Label::fromString($faker->word()),
-                Text::fromString($content),
+            Differ\From::create(
+                Differ\Label::fromString($faker->word()),
+                Differ\Text::fromString($content),
             ),
-            To::create(
-                Label::fromString($faker->word()),
-                Text::fromString($content),
+            Differ\To::create(
+                Differ\Label::fromString($faker->word()),
+                Differ\Text::fromString($content),
             ),
         );
 
-        self::assertEquals(Diff::fromString(''), $diff);
+        self::assertEquals(Differ\Diff::fromString(''), $diff);
     }
 
     /**
@@ -74,20 +68,20 @@ final class MyersDifferTest extends Framework\TestCase
         $fromLabel = $faker->word();
         $toLabel = $faker->word();
 
-        $differ = new MyersDiffer();
+        $differ = new Differ\MyersDiffer();
 
         $diff = $differ->diff(
-            From::create(
-                Label::fromString($fromLabel),
-                Text::fromString($from),
+            Differ\From::create(
+                Differ\Label::fromString($fromLabel),
+                Differ\Text::fromString($from),
             ),
-            To::create(
-                Label::fromString($toLabel),
-                Text::fromString($to),
+            Differ\To::create(
+                Differ\Label::fromString($toLabel),
+                Differ\Text::fromString($to),
             ),
         );
 
-        $expected = Diff::fromString(\sprintf(
+        $expected = Differ\Diff::fromString(\sprintf(
             "--- %s\n+++ %s\n%s",
             $fromLabel,
             $toLabel,
@@ -380,20 +374,20 @@ final class MyersDifferTest extends Framework\TestCase
         $fromLabel = $faker->word();
         $toLabel = $faker->word();
 
-        $differ = new MyersDiffer();
+        $differ = new Differ\MyersDiffer();
 
         $diff = $differ->diff(
-            From::create(
-                Label::fromString($fromLabel),
-                Text::fromString($from),
+            Differ\From::create(
+                Differ\Label::fromString($fromLabel),
+                Differ\Text::fromString($from),
             ),
-            To::create(
-                Label::fromString($toLabel),
-                Text::fromString($to),
+            Differ\To::create(
+                Differ\Label::fromString($toLabel),
+                Differ\Text::fromString($to),
             ),
         );
 
-        $expected = Diff::fromString(\sprintf(
+        $expected = Differ\Diff::fromString(\sprintf(
             "--- %s\n+++ %s\n%s",
             $fromLabel,
             $toLabel,

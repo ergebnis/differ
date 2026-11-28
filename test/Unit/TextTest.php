@@ -13,8 +13,7 @@ declare(strict_types=1);
 
 namespace Ergebnis\Differ\Test\Unit;
 
-use Ergebnis\Differ\Test;
-use Ergebnis\Differ\Text;
+use Ergebnis\Differ;
 use PHPUnit\Framework;
 
 /**
@@ -22,13 +21,13 @@ use PHPUnit\Framework;
  */
 final class TextTest extends Framework\TestCase
 {
-    use Test\Util\Helper;
+    use Differ\Test\Util\Helper;
 
     public function testFromStringReturnsText(): void
     {
         $value = self::faker()->text();
 
-        $text = Text::fromString($value);
+        $text = Differ\Text::fromString($value);
 
         self::assertSame($value, $text->toString());
     }

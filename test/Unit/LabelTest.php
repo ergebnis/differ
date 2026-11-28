@@ -13,9 +13,7 @@ declare(strict_types=1);
 
 namespace Ergebnis\Differ\Test\Unit;
 
-use Ergebnis\Differ\InvalidLabel;
-use Ergebnis\Differ\Label;
-use Ergebnis\Differ\Test;
+use Ergebnis\Differ;
 use PHPUnit\Framework;
 
 /**
@@ -25,7 +23,7 @@ use PHPUnit\Framework;
  */
 final class LabelTest extends Framework\TestCase
 {
-    use Test\Util\Helper;
+    use Differ\Test\Util\Helper;
 
     /**
      * @dataProvider provideLineBreak
@@ -41,9 +39,9 @@ final class LabelTest extends Framework\TestCase
             $faker->word(),
         );
 
-        $this->expectException(InvalidLabel::class);
+        $this->expectException(Differ\InvalidLabel::class);
 
-        Label::fromString($value);
+        Differ\Label::fromString($value);
     }
 
     /**
@@ -68,7 +66,7 @@ final class LabelTest extends Framework\TestCase
     {
         $value = self::faker()->sentence();
 
-        $label = Label::fromString($value);
+        $label = Differ\Label::fromString($value);
 
         self::assertSame($value, $label->toString());
     }
