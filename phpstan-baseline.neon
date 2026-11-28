@@ -1,3 +1,8 @@
 parameters:
-	ignoreErrors: []
+	ignoreErrors:
+		-
+			message: '#^Offset 0 might not exist on array\{0\?\: int\<0, max\>, 1\: int\<0, max\>\}\.$#'
+			identifier: offsetAccess.notFound
+			count: 1
+			path: src/MyersDiffer.php
 
